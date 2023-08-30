@@ -1,6 +1,7 @@
 import { ClerkProvider } from '@clerk/nextjs';
 import '../globals.css';
 import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 import Topbar from '@/components/shared/Topbar';
 import LeftSidebar from '@/components/shared/LeftSidebar';
 import RightSidebar from '@/components/shared/RightSidebar';
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 						<RightSidebar />
 					</main>
 					<Bottombar />
+					<Analytics />
 				</body>
 			</html>
 		</ClerkProvider>
